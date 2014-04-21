@@ -1,8 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <string name="app_name">OpenXC Starter Application</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    
+    <string name="topLogoImgDescriptionText">OpenXC logo</string>
+    <string name="odometerLblTxt">Odometer</string>
+    <string name="engineSpeedLblTxt">Engine speed (RPM):</string>
+    <string name="engineSpeedCentralLblTxt">Engine Speed</string>
+    <string name="fuelConsumedLblTxt">Fuel Consumed:</string>
+    <string name="fuelLevelLblTxt">Fuel Level</string>
+    <string name="steeringWheelAngleLblTxt">Steering Wheel Angle:</string>
+    <string name="vehicleDoorStatusLblTxt">Vehicle Door Status</string>
+    
+    <string name="driverDoorStatusLblTxt">Driver :</string>
+    <string name="passengerDoorStatusLblTxt">Passenger :</string>
+    <string name="rearLeftDoorStatusLblTxt">Rear Left :</string>
+    <string name="rearRightDoorStatusLblTxt">Rear Right :</string>
+    
+    <!-- stubing data -->
+    <!--  
+    <string name="odometerValueLblTxt">50</string>
+    <string name="engineSpeedValueLblTxt">60</string>
+    <string name="fuelConsumedValueLblTxt">90</string>
+    <string name="fuelLevelValueLblTxt">30</string>
+    <string name="steeringWheelAngleValueLblTxt">94</string>
+    <string name="vehicleDoorStatusValueLblTxt">29</string>
+    
+    <string name="driverDoorStatusValueLblTxt">52</string>
+    <string name="passengerDoorStatusValueLblTxt">93</string>
+    <string name="rearLeftDoorStatusValueLblTxt">41</string>
+    <string name="rearRightDoorStatusValueLblTxt">39</string> 
+    -->
+    
+    
+    <style name="measurementLblStyle" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_width">180dp</item>
+    </style>
+    
+    <style name="measurementValueLblStyle" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_width">100dp</item>
+        <item name="android:gravity">right</item>
+    </style>
+    
+    <style name="vehicleDoorStatusLblStyle" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_width">150dp</item>
+        <item name="android:gravity">right</item>
+    </style>
+    
+    <style name="vehicleDoorStatusValueLblStyle" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_width">100dp</item>
+        <item name="android:gravity">center</item>
+    </style>
 
 </resources>

@@ -1,23 +1,171 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:background="@drawable/blue_gradient_bg"
     tools:context=".MainActivity" >
- 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+  
     
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
-        android:id="@+id/vehicle_speed" />
+       <ImageView android:id="@+id/topLogoImg"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:contentDescription="@string/topLogoImgDescriptionText"
+                  android:src="@drawable/odometer"/>
+       <TextView  android:id="@+id/engineSpeedCentralValueLbl"
+                  android:layout_width="match_parent" 
+        		  android:layout_height="wrap_content"
+        		  android:textSize="30sp"
+                  android:gravity="center" />
+       
+       <TextView  android:id="@+id/engineSpeedCentralLbl"
+                  android:layout_width="match_parent" 
+        		  android:layout_height="70dp"
+        		  android:text="@string/engineSpeedCentralLblTxt"
+        		  android:textSize="40sp"
+                  android:gravity="center" />
+   
+     
+  <!--  <LinearLayout android:orientation="horizontal"
+        		  android:layout_width="match_parent"
+        		  android:layout_height="wrap_content">
+        <TextView   android:id="@+id/textView1"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/hello_world" /> 
+     <TextView    android:id="@+id/vehicle_speed"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textView1" />
+    </LinearLayout>-->
     
-</RelativeLayout>
+    
+    <LinearLayout android:orientation="horizontal"
+        		  android:layout_width="match_parent"
+        		  android:layout_height="wrap_content">
+        <TextView  android:id="@+id/odometerLbl" 
+        		   android:layout_height="wrap_content"
+                   android:gravity="left"
+                   android:text="@string/odometerLblTxt" style="@style/measurementLblStyle"/>
+        <TextView  android:id="@+id/odometerValueLbl"
+        		   
+                   android:layout_height="wrap_content"
+                   android:gravity="right"
+                   style="@style/measurementValueLblStyle"/>
+    </LinearLayout>
+    
+    <LinearLayout android:orientation="horizontal"
+        		  android:layout_width="match_parent"
+        		  android:layout_height="wrap_content">
+        <TextView  android:id="@+id/engineSpeedLbl" 
+        		   
+                   android:layout_height="wrap_content"
+                   android:text="@string/engineSpeedLblTxt" style="@style/measurementLblStyle" />
+        <TextView  android:id="@+id/engineSpeedValueLbl"
+        		   
+                   android:layout_height="wrap_content"
+                   style="@style/measurementValueLblStyle" />
+    </LinearLayout>
+    
+
+    
+    <LinearLayout android:orientation="horizontal"
+        		  android:layout_width="match_parent"
+        		  android:layout_height="wrap_content">
+        <TextView  android:id="@+id/fuelConsumedLbl" 
+        		   
+                   android:layout_height="wrap_content" style="@style/measurementLblStyle"
+                   android:text="@string/fuelConsumedLblTxt" />
+        <TextView  android:id="@+id/fuelConsumedValueLbl"
+        		   
+                   android:layout_height="wrap_content"
+                   style="@style/measurementValueLblStyle" />
+    </LinearLayout>
+    
+    <LinearLayout android:orientation="horizontal"
+        		  android:layout_width="match_parent"
+        		  android:layout_height="wrap_content">
+        <TextView  android:id="@+id/fuelLevelLbl" 
+        		   
+                   android:layout_height="wrap_content"
+                   android:text="@string/fuelLevelLblTxt" style="@style/measurementLblStyle"/>
+        <TextView  android:id="@+id/fuelLevelValueLbl"
+        		   
+                   android:layout_height="wrap_content"
+                   style="@style/measurementValueLblStyle"/>
+    </LinearLayout>
+    
+    <LinearLayout android:orientation="horizontal"
+        		  android:layout_width="match_parent"
+        		  android:layout_height="wrap_content">
+        <TextView  android:id="@+id/steeringWheelAngleLbl" 
+        		   
+                   android:layout_height="wrap_content"
+                   android:text="@string/steeringWheelAngleLblTxt" style="@style/measurementLblStyle"/>
+        <TextView  android:id="@+id/steeringWheelAngleValueLbl"
+        		   
+                   android:layout_height="wrap_content"
+                   style="@style/measurementValueLblStyle"/>
+    </LinearLayout>
+    
+    <LinearLayout android:orientation="horizontal"
+        		  android:layout_width="match_parent"
+        		  android:layout_height="wrap_content">
+        <TextView  android:id="@+id/vehicleDoorStatusLbl" 
+                   android:layout_height="wrap_content"
+                   android:gravity="center"
+                   android:text="@string/vehicleDoorStatusLblTxt" style="@style/measurementLblStyle"/>
+      <!--    <TextView  android:id="@+id/vehicleDoorStatusValueLbl"
+                   android:layout_height="wrap_content"
+                   android:text="@string/vehicleDoorStatusValueLblTxt" style="@style/measurementValueLblStyle"/> -->
+    </LinearLayout>
+    
+    <LinearLayout android:orientation="horizontal"
+        		  android:layout_width="match_parent"
+        		  android:layout_height="wrap_content">
+       <TextView  android:id="@+id/driverDoorStatusLbl" 
+                  android:layout_height="wrap_content"
+                  android:text="@string/driverDoorStatusLblTxt" style="@style/vehicleDoorStatusLblStyle"/>
+       <TextView  android:id="@+id/driverDoorStatusValueLbl"
+                  android:layout_height="wrap_content"
+                  style="@style/vehicleDoorStatusValueLblStyle"/>
+    </LinearLayout>
+    
+    <LinearLayout android:orientation="horizontal"
+        		  android:layout_width="match_parent"
+        		  android:layout_height="wrap_content">
+       <TextView  android:id="@+id/passengerDoorStatusLbl" 
+                  android:layout_height="wrap_content"
+                  android:text="@string/passengerDoorStatusLblTxt" style="@style/vehicleDoorStatusLblStyle"/>
+       <TextView  android:id="@+id/passengerDoorStatusValueLbl"
+                  android:layout_height="wrap_content"
+                  style="@style/vehicleDoorStatusValueLblStyle"/>
+    </LinearLayout>
+    
+    <LinearLayout android:orientation="horizontal"
+        		  android:layout_width="match_parent"
+        		  android:layout_height="wrap_content">
+       <TextView  android:id="@+id/rearLeftDoorStatusLbl" 
+                  android:layout_height="wrap_content"
+                  android:text="@string/rearLeftDoorStatusLblTxt" style="@style/vehicleDoorStatusLblStyle"/>
+       <TextView  android:id="@+id/rearLeftDoorStatusValueLbl"
+                  android:layout_height="wrap_content"
+                  style="@style/vehicleDoorStatusValueLblStyle"/>
+    </LinearLayout>  
+    
+    <LinearLayout android:orientation="horizontal"
+        		  android:layout_width="match_parent"
+        		  android:layout_height="wrap_content">
+       <TextView  android:id="@+id/rearRightDoorStatusLbl" 
+                  android:layout_height="wrap_content"
+                  android:text="@string/rearRightDoorStatusLblTxt" style="@style/vehicleDoorStatusLblStyle"/>
+       <TextView  android:id="@+id/rearRightDoorStatusValueLbl"
+                  android:layout_height="wrap_content"
+                  style="@style/vehicleDoorStatusValueLblStyle"/>
+    </LinearLayout> 
+    
+    
+</LinearLayout>
